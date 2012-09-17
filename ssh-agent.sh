@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Note: Put this file (e.g. ssh-agent.sh) in the /etc/profile.d/ directory (and make it executable via 'chmod +x') 
+# Note: Put this file (e.g. ssh-agent.sh) in the /etc/profile.d/ directory (and make it executable via `chmod +x`) 
 # to properly enable ssh-agent for all machines. Seems simple, but a pain in the neck to get this working properly.
 # Compatibiity: Works fine on CentOS 6.X (6.3 as of my testing) and RHEL. YMMV.
 # License: MIT License; Free as in beer. 
