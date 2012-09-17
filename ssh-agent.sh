@@ -9,7 +9,7 @@ SSH_ENV="/tmp/ssh-agent_environment" # centralized file location. accessible to 
 
 function start_agent {
      echo "SSH agent: Starting"
-     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     /usr/bin/ssh-agent | sed "s/^echo/#echo/" > "${SSH_ENV}"
      echo "SSH agent: [OK]"
      chmod 666 "${SSH_ENV}" # make r/w for all users.
      . "${SSH_ENV}" > /dev/null
