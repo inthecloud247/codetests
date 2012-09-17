@@ -5,13 +5,13 @@
 # Compatibiity: Works fine on CentOS 6.X (6.3 as of my testing) and RHEL. YMMV.
 # License: MIT License; Free as in beer. 
 
-SSH_ENV="/tmp/ssh-agent_environment"
+SSH_ENV="/tmp/ssh-agent_environment" # centralized file location. accessible to all users.
 
 function start_agent {
-     echo "Initialising new SSH agent..."
+     echo "SSH agent: Starting"
      /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-     echo succeeded
-     chmod 600 "${SSH_ENV}"
+     echo "SSH agent: [OK]"
+     chmod 666 "${SSH_ENV}" # make r/w for all users.
      . "${SSH_ENV}" > /dev/null
      /usr/bin/ssh-add;
 }
