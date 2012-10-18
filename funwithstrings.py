@@ -10,7 +10,6 @@ class Stringfun:
     self.column = 0
     self.row = 0
     self.funstring = funstring
-    self.funstringlen = len(self.funstring) #to avoid needing to continuously recalculate this
   
   def reset(self):
     self.column = 0
