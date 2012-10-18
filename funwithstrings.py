@@ -5,7 +5,7 @@ import random
 from UserDict import UserDict
 
 class Stringfun:
-  """Fun with Strings and Lists"""  
+  '''Fun with Strings and Lists'''  
   def __init__(self, funstring):
     self.column = 0
     self.row = 0
@@ -32,7 +32,7 @@ class Stringfun:
     return self.funstring[self.column][self.row - 1]
 
   def strstr(self, needle):
-    ''' String comparison. The needle is the item to search for, and if it finds the needle within the data structure (the haystack) then it returns it. Otherwise returns an error message.'''
+    ''' String comparison. The needle is the item to search for, and if it finds the needle within the data structure (the haystack) then it returns it. Otherwise returns False.'''
 
     # init
     self.needle = needle
